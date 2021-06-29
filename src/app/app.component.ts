@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { WarningComponent } from './warning/warning.component';
+
 
 @Component({
   selector: 'app-root',
