@@ -14,9 +14,22 @@ constructor() {
        this.allowToCreateNewServer = false;
     }, 2000);
 
+   
 }
+working(): any {
+    console.warn('Test Button works!');
+  }
+
+  toggleDisabled(): any {
+
+    const testButton = document.getElementById('testButton') as HTMLInputElement;
+    testButton.disabled = !testButton.disabled;
+    console.warn(testButton.disabled);
+  }
 
     ngOnInit(): void {
         throw new Error('Method not implemented.');
     }
 }
+
+
