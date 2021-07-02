@@ -1,15 +1,31 @@
-<input  [disabled]="condition ? true : false"> 
-<input [attr.disabled]="condition ? 'disabled' : null"> 
+
+<label> Server Name</label>
+<input type="text" class="form-contril"(input)="addUpdateServerName($event)">
+ 
+<div>
+    <button class="btn-primary" (click)="addServer()">Create server</button>
+    <p>{{serverStatus}} </p>
+</div>
+
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider round"  (click)="toggleEnable()"></span>
+    <p>{{toggleStatus}} </p>
+  </label>
+
+
+
+
+
+<br>
+<br>
 
 <div>
     <input class="name" type ="text">
 </div>
 
 
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>
+
 
   <button class="btn-primary" [disabled]= "allowToCreateNewServer">Add Server</button>
 <div>
@@ -27,15 +43,22 @@
     <button id="testButton" (click)="working()">Test Button</button>
     </div>
     <div>
+        <button id="saveButton" > Click me </button>
+    </div>
+<div>
+    <button (click)="toggleDisabled()">
+      Click
+    </button>
+</div>
+
+    <div>
     <button (click)="toggleDisabled()"><p [innerText]="toggleDisabled()"></p></button>
     <p [innerText]="toggleDisabled()"></p>
   </div>
 
-  <!-- Bind button disabled state to `isUnchanged` property -->
 <button [value]="isUnchanged">Save</button>
 
   <div class="special">Plain old HTML</div>
   <div>
 <img src="../../assets/images/img.png">
-<button id="saveButton" (click)="toggleDisabled()">Save</button>
-</div>
+

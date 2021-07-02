@@ -8,9 +8,11 @@ import { Component, OnInit } from "@angular/core";
 export class ServersComponent implements OnInit{
 
     allowToCreateNewServer = true;
-    isUnchanged = false;
-    condition: true;
+
+  serverStatus = 'Server not created';
+  toggleStatus = 'Toggle not enabled';
   
+  isUnchanged = false;
 
 constructor() {
     setTimeout(() => {
@@ -19,6 +21,18 @@ constructor() {
 
    
 }
+addServer(): any {
+ this.serverStatus = 'Server created !!!';
+}
+
+addUpdateServerName(event: any): any {
+console.log(event);
+}
+
+toggleEnable(): any {
+    this.toggleStatus = 'Toggle enabled';
+}
+
 working(): any {
     console.warn('Test Button works!');
   }
@@ -31,13 +45,13 @@ working(): any {
     return testButton.disabled;
   }
   clickEnable(): any {
-      const saveTo = document.getElementById('saveButton') as HTMLAnchorElement;
-     // saveTo = false
+      const saveButton = document.getElementById('saveButton') as HTMLAnchorElement;
+     // saveButton.disabled = !saveButton.disabled;
    // this.allowToCreateNewServer = false;
   }
   //allowButton = this.toggleDisabled();
     ngOnInit(): void {
-       // throw new Error('Method not implemented.');
+        this.allowToCreateNewServer = false;
     }
 }
 
