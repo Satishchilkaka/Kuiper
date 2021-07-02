@@ -1,12 +1,41 @@
+<input  [disabled]="condition ? true : false"> 
+<input [attr.disabled]="condition ? 'disabled' : null"> 
+
 <div>
-
-
-<input class="name" type ="text">
-<button class="btn-primary" [disabled]= "allowToCreateNewServer">Add Server</button>
+    <input class="name" type ="text">
 </div>
+
+
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+
+  <button class="btn-primary" [disabled]= "allowToCreateNewServer">Add Server</button>
+<div>
+<label class="switch">
+    <input type="checkbox">
+<div class="slider round" #status [draggable]= "allowToCreateNewServer">
+
+</div> </label>
+<p [innerText] ="allowToCreateNewServer"></p>
+</div>
+<script>
+
+</script>
 <div>
     <button id="testButton" (click)="working()">Test Button</button>
     </div>
     <div>
-    <button (click)="toggleDisabled()">Toggle disabled property for Test Button</button>
+    <button (click)="toggleDisabled()"><p [innerText]="toggleDisabled()"></p></button>
+    <p [innerText]="toggleDisabled()"></p>
   </div>
+
+  <!-- Bind button disabled state to `isUnchanged` property -->
+<button [value]="isUnchanged">Save</button>
+
+  <div class="special">Plain old HTML</div>
+  <div>
+<img src="../../assets/images/img.png">
+<button id="saveButton" (click)="toggleDisabled()">Save</button>
+</div>

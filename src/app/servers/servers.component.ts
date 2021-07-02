@@ -8,6 +8,9 @@ import { Component, OnInit } from "@angular/core";
 export class ServersComponent implements OnInit{
 
     allowToCreateNewServer = true;
+    isUnchanged = false;
+    condition: true;
+  
 
 constructor() {
     setTimeout(() => {
@@ -25,10 +28,16 @@ working(): any {
     const testButton = document.getElementById('testButton') as HTMLInputElement;
     testButton.disabled = !testButton.disabled;
     console.warn(testButton.disabled);
+    return testButton.disabled;
   }
-
+  clickEnable(): any {
+      const saveTo = document.getElementById('saveButton') as HTMLAnchorElement;
+     // saveTo = false
+   // this.allowToCreateNewServer = false;
+  }
+  //allowButton = this.toggleDisabled();
     ngOnInit(): void {
-        throw new Error('Method not implemented.');
+       // throw new Error('Method not implemented.');
     }
 }
 
