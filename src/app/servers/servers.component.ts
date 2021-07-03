@@ -1,39 +1,39 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'app-servers',
-    templateUrl: './servers.component.html',
-    styleUrls: ['./servers.component.css']
+  selector: 'app-servers',
+  templateUrl: './servers.component.html',
+  styleUrls: ['./servers.component.css']
 })
-export class ServersComponent implements OnInit{
+export class ServersComponent implements OnInit {
 
-    allowToCreateNewServer = true;
+  allowToCreateNewServer = true;
 
   serverStatus = 'Server not created';
   toggleStatus = 'Toggle not enabled';
-  
+
   isUnchanged = false;
 
-constructor() {
+  constructor() {
     setTimeout(() => {
-       this.allowToCreateNewServer = false;
+      this.allowToCreateNewServer = false;
     }, 2000);
 
-   
-}
-addServer(): any {
- this.serverStatus = 'Server created !!!';
-}
 
-addUpdateServerName(event: any): any {
-console.log(event);
-}
+  }
+  addServer(): any {
+    this.serverStatus = 'Server created !!!';
+  }
 
-toggleEnable(): any {
+  addUpdateServerName(event: any): any {
+    console.log(event);
+  }
+
+  toggleEnable(): any {
     this.toggleStatus = 'Toggle enabled';
-}
+  }
 
-working(): any {
+  working(): any {
     console.warn('Test Button works!');
   }
 
@@ -45,14 +45,14 @@ working(): any {
     return testButton.disabled;
   }
   clickEnable(): any {
-      const saveButton = document.getElementById('saveButton') as HTMLAnchorElement;
-     // saveButton.disabled = !saveButton.disabled;
-   // this.allowToCreateNewServer = false;
+    const saveButton = document.getElementById('saveButton') as HTMLAnchorElement;
+    // saveButton.disabled = !saveButton.disabled;
+    // this.allowToCreateNewServer = false;
   }
   //allowButton = this.toggleDisabled();
-    ngOnInit(): void {
-        this.allowToCreateNewServer = false;
-    }
+  ngOnInit(): void {
+    this.allowToCreateNewServer = false;
+  }
 }
 
 
