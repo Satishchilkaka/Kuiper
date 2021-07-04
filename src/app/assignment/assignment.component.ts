@@ -10,7 +10,7 @@ export class AssignmentComponent implements OnInit {
   userName: string;
   userStatus = 'User not created';
 
-  addUser(event: any): any {
+  user(event: any): any {
     this.userName = event.target.value;
   }
   createUser(): any {
