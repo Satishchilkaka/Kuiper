@@ -13,6 +13,7 @@ export class ServersComponent implements OnInit {
   toggleStatus = 'Toggle not enabled';
 
   isUnchanged = false;
+  serverName: number;
 
   constructor() {
     setTimeout(() => {
@@ -21,12 +22,14 @@ export class ServersComponent implements OnInit {
 
 
   }
-  addServer(): any {
-    this.serverStatus = 'Server created !!!';
-  }
+
 
   addUpdateServerName(event: any): any {
-    console.log(event);
+    this.serverName = event.target.value;
+    console.log(event.target.value);
+  }
+  createServer(): any {
+    this.serverStatus = 'Server name: ' + this.serverName + ' created ';
   }
 
   toggleEnable(): any {
@@ -34,14 +37,13 @@ export class ServersComponent implements OnInit {
   }
 
   working(): any {
-    console.warn('Test Button works!');
   }
 
   toggleDisabled(): any {
 
     const testButton = document.getElementById('testButton') as HTMLInputElement;
     testButton.disabled = !testButton.disabled;
-    console.warn(testButton.disabled);
+
     return testButton.disabled;
   }
   clickEnable(): any {

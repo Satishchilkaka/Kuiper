@@ -1,64 +1,65 @@
+<!-- <label> Server Name</label>
+<input type="text" class="form-control" (input)="addUpdateServerName($event)" />
+<br />
+<p>{{ serverName }}</p> -->
 
 <label> Server Name</label>
-<input type="text" class="form-contril"(input)="addUpdateServerName($event)">
- 
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+
+<p>{{ serverName }}</p>
+
+<button class="btn-primary" (click)="createServer()">Create server</button>
+<p>{{ serverStatus }}</p>
+
+<br />
+<br />
+<label class="switch">
+  <input type="checkbox" />
+  <span class="slider round" (click)="toggleEnable()"></span>
+</label>
 <div>
-    <button class="btn-primary" (click)="addServer()">Create server</button>
-    <p>{{serverStatus}} </p>
+  <p>{{ toggleStatus }}</p>
 </div>
 
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider round"  (click)="toggleEnable()"></span>
-    <p>{{toggleStatus}} </p>
+<div>
+  <input class="name" type="text" />
+</div>
+
+<button class="btn-primary" [disabled]="allowToCreateNewServer">
+  Add Server
+</button>
+<div>
+  <label class="switch">
+    <input type="checkbox" />
+    <div
+      class="slider round"
+      #status
+      [draggable]="allowToCreateNewServer"
+    ></div>
   </label>
-
-
-
-
-
-<br>
-<br>
-
+  <p [innerText]="allowToCreateNewServer"></p>
+</div>
+<script></script>
 <div>
-    <input class="name" type ="text">
+  <button id="testButton" (click)="working()">Test Button</button>
+</div>
+<div>
+  <button id="saveButton">Click me</button>
+</div>
+<div>
+  <button (click)="toggleDisabled()">Click</button>
 </div>
 
-
-
-
-  <button class="btn-primary" [disabled]= "allowToCreateNewServer">Add Server</button>
 <div>
-<label class="switch">
-    <input type="checkbox">
-<div class="slider round" #status [draggable]= "allowToCreateNewServer">
-
-</div> </label>
-<p [innerText] ="allowToCreateNewServer"></p>
-</div>
-<script>
-
-</script>
-<div>
-    <button id="testButton" (click)="working()">Test Button</button>
-    </div>
-    <div>
-        <button id="saveButton" > Click me </button>
-    </div>
-<div>
-    <button (click)="toggleDisabled()">
-      Click
-    </button>
-</div>
-
-    <div>
-    <button (click)="toggleDisabled()"><p [innerText]="toggleDisabled()"></p></button>
+  <button (click)="toggleDisabled()">
     <p [innerText]="toggleDisabled()"></p>
-  </div>
+  </button>
+  <p [innerText]="toggleDisabled()"></p>
+</div>
 
 <button [value]="isUnchanged">Save</button>
 
-  <div class="special">Plain old HTML</div>
-  <div>
-<img src="../../assets/images/img.png">
-
+<div class="special">Plain old HTML</div>
+<div>
+  <img src="../../assets/images/img.png" />
+</div>
