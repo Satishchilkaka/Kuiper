@@ -10,5 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class TestserverComponent implements OnInit {
     constructor() { }
 
+    serverName: string;
+    serverInput(event: any): any {
+        this.serverName = event.target.value;
+
+    }
+
+
     ngOnInit() { }
 }
