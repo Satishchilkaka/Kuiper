@@ -11,11 +11,14 @@ export class TestserverComponent implements OnInit {
     constructor() { }
 
     serverName: string;
+    serverProgress: string;
+    server = Math.random();
     serverInput(event: any): any {
         this.serverName = event.target.value;
-
     }
-
+    serverState(): any {
+        this.serverProgress = 'Server name: ' + this.serverName + ' created';
+    }
 
     ngOnInit() { }
 }

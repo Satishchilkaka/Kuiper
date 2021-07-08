@@ -1,3 +1,11 @@
 <input type="text" class="form-control" [(ngModel)]="serverName" />
 <p>{{ serverName }}</p>
-<button class="btn btn-primary">Add Server</button>
+<button
+  class="btn btn-primary"
+  [disabled]="!serverName"
+  (click)="serverState()"
+>
+  Add Server
+</button>
+<p>{{ serverProgress }}</p>
+<p>{{ server }}</p>
