@@ -17,7 +17,7 @@ export class TestserverComponent implements OnInit {
         this.serverName = event.target.value;
     }
     serverState(): any {
-        this.serverProgress = 'Server name: ' + this.serverName + ' created';
+        this.serverProgress = this.serverName;
     }
 
     ngOnInit() { }
