@@ -1,1 +1,16 @@
-<p>servertest works!</p>
+<input type="text" class="form-control" [(ngModel)]="userInput" />
+
+<button
+  class="btn btn-primary"
+  [disabled]="!userInput"
+  (click)="addTestServerName()"
+>
+  Add server
+</button>
+<p *ngIf="serverName; else noServerCreated">
+  Server name: {{ serverName }} created
+</p>
+
+<ng-template #noServerCreated>
+  <p>Server not created yet</p>
+</ng-template>
