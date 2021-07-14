@@ -11,6 +11,7 @@ export class ServertestComponent implements OnInit {
   serverName: string;
   serverId = 100;
   serverStatus = 'Offline';
+  servers = ['ServerOne, ServerTwo, ServerThree'];
   constructor() {
     this.serverStatus = Math.random() * 10 > 3 ? 'Online' : 'Offline';
     console.log(Math.random() * 7);
@@ -23,6 +24,7 @@ export class ServertestComponent implements OnInit {
     this.userInput = event.target.value;
   }
   addTestServerName(): any {
+    this.servers.push(this.serverName);
     this.serverName = this.userInput;
   }
   getColor(): any {

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { WarningComponent } from './warning/warning.component';
-
+import { ServertestComponent } from './servertest/servertest.component';
 
 @Component({
   selector: 'app-root',
