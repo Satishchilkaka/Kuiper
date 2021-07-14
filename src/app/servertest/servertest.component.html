@@ -14,3 +14,9 @@
 <ng-template #noServerCreated>
   <p>Server not created yet</p>
 </ng-template>
+
+<p [ngStyle]="{ backgroundColor: getColor() }">
+  ServerID:{{ serverId }} : {{ serverStatus }}
+</p>
+
+<p>ServerID:{{ serverId }} : {{ getServerStatus() }}</p>
