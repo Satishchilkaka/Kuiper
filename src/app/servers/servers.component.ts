@@ -36,8 +36,7 @@ export class ServersComponent implements OnInit {
     this.toggleStatus = 'Toggle enabled';
   }
 
-  working(): any {
-  }
+
 
   toggleDisabled(): any {
 
@@ -51,7 +50,7 @@ export class ServersComponent implements OnInit {
     // saveButton.disabled = !saveButton.disabled;
     // this.allowToCreateNewServer = false;
   }
-  //allowButton = this.toggleDisabled();
+  // allowButton = this.toggleDisabled();
   ngOnInit(): void {
     this.allowToCreateNewServer = false;
   }

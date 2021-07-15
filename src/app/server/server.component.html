@@ -1,2 +1,3 @@
-<h3> This is Server id {{serverId}}</h3>
-<h3> Server status is {{getServerStatus()}}</h3>
+<h3>This is Server id {{ serverId }}</h3>
+<h3>Server status is {{ getServerStatus() }}</h3>
+<app-servers *ngFor="let server of servers"></app-servers>

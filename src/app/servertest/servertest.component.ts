@@ -13,8 +13,8 @@ export class ServertestComponent implements OnInit {
   serverStatus = 'Offline';
   servers = ['ServerOne, ServerTwo, ServerThree'];
   constructor() {
-    this.serverStatus = Math.random() * 10 > 3 ? 'Online' : 'Offline';
-    console.log(Math.random() * 7);
+    this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
+    console.log(this.servers.length);
   }
   getServerStatus(): any {
     return this.serverStatus;

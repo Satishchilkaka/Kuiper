@@ -10,7 +10,7 @@
 <p *ngIf="serverName; else noServerCreated">
   Server name: {{ serverName }} created
 </p>
-<app-servertest *ngFor="let server of servers"></app-servertest>
+<!-- <app-servertest ngFor="let server of servers"></app-servertest> -->
 <ng-template #noServerCreated>
   <p>Server not created yet</p>
 </ng-template>

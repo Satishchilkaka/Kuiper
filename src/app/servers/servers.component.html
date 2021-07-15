@@ -8,10 +8,16 @@
 
 <p>{{ serverName }}</p>
 
-<button class="btn-primary" (click)="createServer()">Create server</button>
+<button
+  class="btn btn-primary"
+  [disabled]="!serverName"
+  (click)="createServer()"
+>
+  Create server
+</button>
 <p>{{ serverStatus }}</p>
 
-<br />
+<!-- <br />
 <br />
 <label class="switch">
   <input type="checkbox" />
@@ -62,4 +68,4 @@
 <div class="special">Plain old HTML</div>
 <div>
   <img src="../../assets/images/img.png" />
-</div>
+</div> -->
