@@ -1,3 +1,18 @@
-<h3>This is Server id {{ serverId }}</h3>
-<h3>Server status is {{ getServerStatus() }}</h3>
-<app-servers *ngFor="let server of servers"></app-servers>
+<label>Server name</label>
+<input type="text" class="form-control" [(ngModel)]="serverNameInput" />
+
+<button
+  class="btn btn-primary"
+  [disabled]="!serverNameInput"
+  (click)="getServerName()"
+>
+  Add server
+</button>
+
+<p *ngIf="serverName; else noServerCreated">
+  {{ serverName }}
+</p>
+
+<ng-template #noServerCreated>
+  <p>Server not created yet !</p>
+</ng-template>

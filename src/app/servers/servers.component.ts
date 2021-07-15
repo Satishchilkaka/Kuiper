@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
@@ -11,7 +11,7 @@ export class ServersComponent implements OnInit {
 
   serverStatus = 'Server not created';
   toggleStatus = 'Toggle not enabled';
-
+  servers = ['OneServer', 'twoServer', 'ThreeServer'];
   isUnchanged = false;
   serverName: number;
 
