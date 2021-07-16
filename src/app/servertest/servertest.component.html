@@ -7,10 +7,9 @@
 >
   Add server
 </button>
-<p *ngIf="serverName; else noServerCreated">
-  Server name: {{ serverName }} created
-</p>
-<!-- <app-servertest ngFor="let server of servers"></app-servertest> -->
+<p *ngIf="serverName; else noServerCreated"></p>
+<p *ngFor="let server of servers">{{ server }} {{ today }}</p>
+
 <ng-template #noServerCreated>
   <p>Server not created yet</p>
 </ng-template>

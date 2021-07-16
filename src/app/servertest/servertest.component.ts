@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as dayjs from 'dayjs';
 @Component({
   selector: 'app-servertest',
   templateUrl: './servertest.component.html',
@@ -11,7 +11,9 @@ export class ServertestComponent implements OnInit {
   serverName: string;
   serverId = 100;
   serverStatus = 'Offline';
-  servers = ['ServerOne, ServerTwo, ServerThree'];
+  servers = ['ServerOne', 'ServerTwo', 'ServerThree'];
+  currentTime = dayjs();
+  today = new Date();
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
     console.log(this.servers.length);
@@ -24,8 +26,8 @@ export class ServertestComponent implements OnInit {
     this.userInput = event.target.value;
   }
   addTestServerName(): any {
-    this.servers.push(this.serverName);
     this.serverName = this.userInput;
+    this.servers.push(this.serverName);
   }
   getColor(): any {
     return this.serverStatus === 'Online' ? 'green' : 'red';

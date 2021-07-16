@@ -1,2 +1,3 @@
 <button class="btn btn-primary" (click)="details()">Display Details</button>
 <p>{{ password }}</p>
+<p *ngFor="let usa of users">{{ usa }}{{ dateTime() }}</p>
