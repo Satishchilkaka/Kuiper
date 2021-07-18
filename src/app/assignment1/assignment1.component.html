@@ -2,6 +2,11 @@
 <div *ngIf="!toggle">{{ text }}</div>
 
 <p>{{ password }}</p>
-<p *ngIf="count >= 5">{{ count }}</p>
-<p [ngStyle]="{ backgroundColor: getColor() }"></p>
-<p *ngFor="let usa of users">{{ usa }}</p>
+<p *ngIf="count >= 5"></p>
+
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ clicks: count === 5 }"
+>
+  Total number of clicks :{{ count }} time: {{ today }}
+</p>

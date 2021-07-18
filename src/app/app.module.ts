@@ -11,13 +11,15 @@ import { AssignmentComponent } from './assignment/assignment.component';
 import { UserComponent } from './user/user.component';
 import { ServertestComponent } from './servertest/servertest.component';
 import { Assignment1Component } from './assignment1/assignment1.component';
+import { Assignment01Component } from './assignment01/assignment01.component';
 
 @NgModule({
   declarations: [
     AppComponent, WarningComponent, ServerComponent, ServersComponent, AssignmentComponent,
     UserComponent,
     ServertestComponent,
-    Assignment1Component
+    Assignment1Component,
+    Assignment01Component
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule

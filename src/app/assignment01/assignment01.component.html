@@ -1,0 +1,11 @@
+<input type="text" class="form-control" [(ngModel)]="inputFieldText" />
+
+<button
+  class="btn btn-primary"
+  [disabled]="!inputFieldText"
+  (click)="iDetails()"
+>
+  Display Details
+</button>
+<div *ngIf="!toggle">{{ inputDetails }}</div>
+<p *ngIf="inputDetails">{{ inputDetails }}</p>

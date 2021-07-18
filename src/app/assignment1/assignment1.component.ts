@@ -10,7 +10,6 @@ import * as dayjs from 'dayjs';
 export class Assignment1Component implements OnInit {
 
   constructor() { }
-  users = ['user1', 'user2', 'user3'];
   today = new Date();
   toggle = true;
   password: string;
