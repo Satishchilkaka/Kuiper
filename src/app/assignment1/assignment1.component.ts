@@ -10,21 +10,23 @@ import * as dayjs from 'dayjs';
 export class Assignment1Component implements OnInit {
 
   constructor() { }
-  today = new Date();
-  toggle = true;
+  toggle = false;
   password: string;
   text = 'This is text';
+  clcikLogs = [];
   count = 0;
   details(): any {
     this.toggle = !this.toggle;
-    return this.count++;
+    this.clcikLogs.push(new Date());
+  }
+  showClicks(): any {
 
   }
   dateTime(): any {
     return dayjs();
   }
   getColor(): any {
-    return this.count >= 5 ? 'red' : 'green';
+    // this.clcikLogs.length >= 5 ? 'red' : 'green';
   }
 
   ngOnInit(): void {

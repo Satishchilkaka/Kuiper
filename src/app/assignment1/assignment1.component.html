@@ -1,12 +1,8 @@
 <button class="btn btn-primary" (click)="details()">Display Details</button>
 <div *ngIf="!toggle">{{ text }}</div>
-
-<p>{{ password }}</p>
-<p *ngIf="count >= 5"></p>
-
-<p
-  [ngStyle]="{ backgroundColor: getColor() }"
-  [ngClass]="{ clicks: count === 5 }"
+<div
+  *ngFor="let clicks of clcikLogs; let i = index"
+  [ngStyle]="{ backgroundColor: i <= 4 ? 'green' : 'blue' }"
 >
-  Total number of clicks :{{ count }} time: {{ today }}
-</p>
+  {{ clicks }}
+</div>

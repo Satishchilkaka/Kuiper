@@ -8,4 +8,6 @@
   Display Details
 </button>
 <div *ngIf="!toggle">{{ inputDetails }}</div>
-<p *ngIf="inputDetails">{{ inputDetails }}</p>
+<div *ngFor="let clcicks of clickLogs">{{ inputDetails }}</div>
+
+<!-- <p *ngIf="inputDetails">{{ inputDetails }}</p> -->
